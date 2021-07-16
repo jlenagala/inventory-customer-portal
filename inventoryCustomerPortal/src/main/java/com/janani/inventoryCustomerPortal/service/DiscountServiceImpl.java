@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class DiscountServiceImpl implements DiscounService{
+public class DiscountServiceImpl implements DiscountService{
     @Autowired
     DiscountRepository discountRepository;
     @Override
