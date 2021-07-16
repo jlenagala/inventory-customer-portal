@@ -5,7 +5,6 @@ import com.janani.inventoryCustomerPortal.model.Payment;
 import com.janani.inventoryCustomerPortal.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-;
 
 @RestController
 public class PaymentController {
