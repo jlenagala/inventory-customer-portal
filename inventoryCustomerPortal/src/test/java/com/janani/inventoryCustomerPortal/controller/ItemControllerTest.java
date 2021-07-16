@@ -42,8 +42,8 @@ Item item;
     }
 
     @Test
-    void deleteProfile() {
-        itemController.deleteProfile(1);
+    void deleteItems() {
+        itemController.deleteItems(1);
     }
 
     @Test
