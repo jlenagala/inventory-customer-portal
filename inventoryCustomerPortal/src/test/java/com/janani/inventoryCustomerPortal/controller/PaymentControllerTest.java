@@ -19,9 +19,4 @@ class PaymentControllerTest {
     @Mock
     Payment payment;
 
-    @Test
-    void calculateTotalAmount() {
-        payment.setId(1);
-     //   paymentService.calculateTotalAmount(item, payment, 1);
-    }
 }
