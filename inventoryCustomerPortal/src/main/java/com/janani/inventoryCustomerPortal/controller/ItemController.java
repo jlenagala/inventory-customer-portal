@@ -34,7 +34,7 @@ public class ItemController {
     }
 
     @DeleteMapping("/items/{id}")
-    public void deleteProfile(@PathVariable int id) {
+    public void deleteItems(@PathVariable int id) {
         Item item = itemService.getItemById(id);
         itemService.deleteItemById(id);
     }
