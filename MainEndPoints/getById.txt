@@ -1,0 +1,25 @@
+http://localhost:8080/items/1
+
+{
+    "id": 1,
+    "itemCode": 111,
+    "quantity": 10,
+    "price": 300.00,
+    "expiredDate": "2022-01-15T14:23:00",
+    "tax": {
+        "id": 2,
+        "taxRate": 0.20,
+        "taxStatus": "EXPIRED"
+    },
+    "discount": {
+        "id": 1,
+        "discountRate": 0.05,
+        "expiredDate": "2021-11-15T14:23:00",
+        "startDate": "2021-01-15T14:23:00",
+        "discountStatus": "ADDED"
+    },
+    "category": {
+        "id": 1,
+        "type": "soap"
+    }
+}

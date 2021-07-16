@@ -1,0 +1,74 @@
+GET all Discounted Items
+
+http://localhost:8080/discountitems
+[
+    {
+        "id": 1,
+        "itemCode": 111,
+        "quantity": 10,
+        "price": 300.00,
+        "expiredDate": "2022-01-15T14:23:00",
+        "tax": {
+            "id": 2,
+            "taxRate": 0.20,
+            "taxStatus": "EXPIRED"
+        },
+        "discount": {
+            "id": 1,
+            "discountRate": 0.05,
+            "expiredDate": "2021-11-15T14:23:00",
+            "startDate": "2021-01-15T14:23:00",
+            "discountStatus": "ADDED"
+        },
+        "category": {
+            "id": 1,
+            "type": "soap"
+        }
+    },
+    {
+        "id": 3,
+        "itemCode": 113,
+        "quantity": 20,
+        "price": 600.00,
+        "expiredDate": "2021-12-15T14:23:00",
+        "tax": {
+            "id": 1,
+            "taxRate": 0.10,
+            "taxStatus": "ADDED"
+        },
+        "discount": {
+            "id": 1,
+            "discountRate": 0.05,
+            "expiredDate": "2021-11-15T14:23:00",
+            "startDate": "2021-01-15T14:23:00",
+            "discountStatus": "ADDED"
+        },
+        "category": {
+            "id": 2,
+            "type": "cream"
+        }
+    },
+    {
+        "id": 4,
+        "itemCode": 114,
+        "quantity": 40,
+        "price": 200.00,
+        "expiredDate": "2022-01-15T14:23:00",
+        "tax": {
+            "id": 2,
+            "taxRate": 0.20,
+            "taxStatus": "EXPIRED"
+        },
+        "discount": {
+            "id": 1,
+            "discountRate": 0.05,
+            "expiredDate": "2021-11-15T14:23:00",
+            "startDate": "2021-01-15T14:23:00",
+            "discountStatus": "ADDED"
+        },
+        "category": {
+            "id": 1,
+            "type": "soap"
+        }
+    }
+]
