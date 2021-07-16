@@ -1,5 +1,6 @@
 package com.janani.inventoryCustomerPortal.service;
 
+import com.janani.inventoryCustomerPortal.model.Category;
 import com.janani.inventoryCustomerPortal.model.Item;
 import com.janani.inventoryCustomerPortal.model.Payment;
 import com.janani.inventoryCustomerPortal.model.Status;
@@ -7,8 +8,10 @@ import com.janani.inventoryCustomerPortal.repository.ItemRepository;
 import com.janani.inventoryCustomerPortal.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -19,6 +22,7 @@ public class PaymentServiceImpl implements PaymentService {
     PaymentRepository paymentRepository;
 
     @Override
+    @Transactional
     public Payment calculateTotalAmount(Item item, Payment payment,int qty) {
         BigDecimal itemPrice,discount, discountRate, total = null;
         String s = String.valueOf(item.getDiscount().getDiscountStatus());
@@ -43,6 +47,31 @@ public class PaymentServiceImpl implements PaymentService {
         paymentRepository.save(payment);
         itemRepository.save(item);
         return payment;
+    }
+
+    @Override
+    public List<Payment> getAllPayment() {
+        return paymentRepository.findAll();
+    }
+
+    @Override
+    public Payment getPaymentById(int id) {
+        Optional<Payment> payment = paymentRepository.findById(id);
+        if (payment.isPresent()) {
+            return payment.get();
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public Payment addPayment(Payment payment) {
+        return paymentRepository.save(payment);
+    }
+
+    @Override
+    public void deletePaymentById(int id) {
+        paymentRepository.deleteById(id);
     }
 
 
